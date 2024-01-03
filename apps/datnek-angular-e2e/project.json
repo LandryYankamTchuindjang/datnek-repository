@@ -1,0 +1,30 @@
+{
+  "name": "datnek-angular-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/datnek-angular-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/datnek-angular-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "datnek-angular:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "datnek-angular:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "datnek-angular:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["datnek-angular"]
+}
