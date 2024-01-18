@@ -20,8 +20,15 @@
           "apps/datnek-angular/src/favicon.ico",
           "apps/datnek-angular/src/assets"
         ],
-        "styles": ["apps/datnek-angular/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "apps/datnek-angular/src/styles.scss",
+          "apps/datnek-angular/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
+        "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/jquery/dist/jquery.js"
+        ]
       },
       "configurations": {
         "production": {
