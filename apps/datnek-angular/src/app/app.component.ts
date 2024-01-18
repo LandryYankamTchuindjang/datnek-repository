@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PostComponent } from './components/post/post.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [HeaderComponent, PostComponent, RouterModule],
   selector: 'datnek-monorepo-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -12,3 +13,10 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 export class AppComponent {
   title = 'datnek-angular';
 }
+
+// @NgModule({
+//   declarations: [AppComponent, HeaderComponent, PostComponent],
+//   imports: [RouterModule, CommonModule],
+//   exports: [RouterModule],
+// })
+// export class AppModule {}
